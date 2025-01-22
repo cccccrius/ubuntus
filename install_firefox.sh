@@ -3,23 +3,18 @@
 
 myloc=$(dirname "$(realpath $0)")
 
-sudo apt purge -y firefox firefox-locale-fr firefox-locale-en
-sudo dnf -q autoremove -y firefox*
+sudo apt purge -y firefox*
 sudo \rm -f /usr/bin/firefox
 sudo \rm -Rf /usr/lib64/firefox
 sudo \rm -Rf /usr/lib64/firefox-addons
 sudo \rm -Rf /opt/firefox
 #sudo \rm -Rf ~/.mozilla
 sudo \rm ~/FirefoxSetup.tar.bz2 2> /dev/null
-sudo \rm -rf /usr/lib64/firefox
-sudo \rm -rf /usr/lib64/firefox-addons
-sudo \rm -rf /opt/firefox
 
 wget -O ~/FirefoxSetup.tar.bz2 "https://download.mozilla.org/?product=firefox-latest&os=linux64&lang=fr"
 
 sudo tar xjf ~/FirefoxSetup.tar.bz2 -C /usr/lib64/
 
-sudo unlink /usr/bin/firefox
 sudo ln -s /usr/lib64/firefox/firefox /usr/bin/firefox
 
 sudo \rm /usr/lib64/firefox/defaults/pref/autoconfig.js 2> /dev/null
