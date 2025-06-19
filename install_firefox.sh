@@ -72,6 +72,15 @@ pref("media.ffmpeg.vaapi.enabled",true);
 pref("media.ffvpx.enabled",false);
 pref("media.rdd-vpx.enabled",false);
 pref("media.navigator.mediadatadecoder_vpx_enabled",true);
+pref("image.webp",false);
+pref("browser.download.viewableInternally.typeWasRegistered.webp",false);
+pref("drm",true);
+pref("sidebar.visibility", "hide-sidebar");
+pref("sidebar.revamp", false);
+pref("signon.rememberSignons", false);
+pref("browser.translations.automaticallyPopup", false);
+pref("browser.startup.page", 3);
+pref("browser.shell.checkDefaultBrowser", true);
 EOF
 
 sudo \rm /usr/lib64/firefox/distribution/policies.json 2> /dev/null
@@ -85,10 +94,6 @@ sudo tee /usr/lib64/firefox/distribution/policies.json >/dev/null <<'EOF'
         "installation_mode": "normal_installed",
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi"
       },
-      "{66E978CD-981F-47DF-AC42-E3CF417C1467}": {
-        "installation_mode": "normal_installed",
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/new-tab-homepage/latest.xpi"
-      },
       "{26b743a8-b1b0-4b8c-a51e-0fc3797727a8}": {
         "installation_mode": "normal_installed",
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/google-consent-dialog-remover/latest.xpi"
@@ -100,6 +105,10 @@ sudo tee /usr/lib64/firefox/distribution/policies.json >/dev/null <<'EOF'
       "jid1-MnnxcxisBPnSXQ@jetpack": {
         "installation_mode": "normal_installed",
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/privacy-badger17/latest.xpi"
+      },
+      "newtaboverride@agenedia.com": {
+        "installation_mode": "normal_installed",
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/new-tab-override/latest.xpi"
       },
       "pure-url@jetpack": {
         "installation_mode": "normal_installed",
@@ -115,35 +124,51 @@ sudo tee /usr/lib64/firefox/distribution/policies.json >/dev/null <<'EOF'
       },
       "{74145f27-f039-47ce-a470-a662b129930a}": {
         "installation_mode": "normal_installed",
-        "install_url": "https://addons.mozilla.org/firefox/downloads/file/4064884/clearurls-1.26.1.xpi"
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/clearurls/latest.xpi"
       },
       "dont-track-me-google@robwu.nl": {
         "installation_mode": "normal_installed",
-        "install_url": "https://addons.mozilla.org/firefox/downloads/file/4132891/dont_track_me_google1-4.28.xpi"
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/dont-track-me-google1/latest.xpi"
       },
       "gmailellcheckersimple@durasoft": {
         "installation_mode": "normal_installed",
-        "install_url": "https://addons.mozilla.org/firefox/downloads/file/4273216/gmail_checker_simple-1.1resigned1.xpi"
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/gmail-checker-simple/latest.xpi"
       },
       "{abea9bb3-7bd0-48bc-88b1-39f0560744d6}": {
         "installation_mode": "normal_installed",
-        "install_url": "https://addons.mozilla.org/firefox/downloads/file/4302353/google_search_fixer_refreshed-2.0.xpi"
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/google-search-fixer-refreshed/latest.xpi"
       },
       "{00000f2a-7cde-4f20-83ed-434fcb420d71}": {
         "installation_mode": "normal_installed",
-        "install_url": "https://addons.mozilla.org/firefox/downloads/file/3547888/imagus-0.9.8.74.xpi"
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/imagus/latest.xpi"
       },
       "support@netflux.me": {
         "installation_mode": "normal_installed",
-        "install_url": "https://addons.mozilla.org/firefox/downloads/file/4335048/netflux-1.0.9.xpi"
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/netflux/latest.xpi"
       },
       "plasma-browser-integration@kde.org": {
         "installation_mode": "normal_installed",
-        "install_url": "https://addons.mozilla.org/firefox/downloads/file/4298512/plasma_integration-1.9.1.xpi"
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/plasma-integration/latest.xpi"
+      },
+      "chrome-gnome-shell@gnome.org": {
+        "installation_mode": "normal_installed",
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/gnome-shell-integration/latest.xpi"
+      },
+      "{7c73b62b-7ac7-4292-81a7-c15746af0972}": {
+        "installation_mode": "normal_installed",
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/google-search-display-icon/latest.xpi"
       },
       "{a6c4a591-f1b2-4f03-b3ff-767e5bedf4e7}": {
         "installation_mode": "normal_installed",
-        "install_url": "https://addons.mozilla.org/firefox/downloads/file/4098688/user_agent_string_switcher-0.5.0.xpi"
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/user-agent-string-switcher/latest.xpi"
+      },
+      "NetflixPrime@Autoskip.io": {
+        "installation_mode": "normal_installed",
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/netflix-prime-auto-skip/latest.xpi"
+      },
+      "78272b6fa58f4a1abaac99321d503a20@proton.me": {
+        "installation_mode": "normal_installed",
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/proton-pass/latest.xpi"
       }
     }
   }
