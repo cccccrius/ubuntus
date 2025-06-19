@@ -17,9 +17,6 @@ deb http://fr.archive.ubuntu.com/ubuntu/ plucky-updates main restricted universe
 deb http://fr.archive.ubuntu.com/ubuntu/ plucky-backports main restricted universe multiverse
 deb http://fr.archive.ubuntu.com/ubuntu/ plucky-security main restricted universe multiverse" | sudo tee /etc/apt/sources.list
 
-# on supprime firefox installé depuis le repo chinois
-sudo apt purge -y firefox*
-
 # on impoorte la clé du repo officiel mozilla
 sudo wget https://packages.mozilla.org/apt/repo-signing-key.gpg -O  /etc/apt/keyrings/packages.mozilla.org.asc
 
