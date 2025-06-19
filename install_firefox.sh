@@ -11,9 +11,9 @@ sudo \rm -Rf /opt/firefox
 #sudo \rm -Rf ~/.mozilla
 sudo \rm ~/FirefoxSetup.tar.bz2 2> /dev/null
 
-wget -O ~/FirefoxSetup.tar.bz2 "https://download.mozilla.org/?product=firefox-latest&os=linux64&lang=fr"
+wget -O ~/FirefoxSetup.tar.xz "https://download.mozilla.org/?product=firefox-latest&os=linux64&lang=fr"
 
-sudo tar xjf ~/FirefoxSetup.tar.bz2 -C /usr/lib64/
+sudo tar xf ~/FirefoxSetup.tar.bz2 -C /usr/lib64/
 
 sudo ln -s /usr/lib64/firefox/firefox /usr/bin/firefox
 
