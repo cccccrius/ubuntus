@@ -74,6 +74,13 @@ pref("media.rdd-vpx.enabled",false);
 pref("media.navigator.mediadatadecoder_vpx_enabled",true);
 pref("image.webp",false);
 pref("browser.download.viewableInternally.typeWasRegistered.webp",false);
+pref("drm",true);
+pref("sidebar.visibility", "hide-sidebar");
+pref("sidebar.revamp", false);
+pref("signon.rememberSignons", false);
+pref("browser.translations.automaticallyPopup", false);
+pref("browser.startup.page", 3);
+pref("browser.shell.checkDefaultBrowser", true);
 EOF
 
 sudo \rm /usr/lib64/thunderbird/distribution/policies.json 2> /dev/null
