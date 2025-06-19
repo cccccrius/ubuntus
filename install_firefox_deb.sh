@@ -106,7 +106,7 @@ EOF
 sudo \rm /usr/lib/firefox/distribution/policies.json 2> /dev/null
 sudo mkdir -p /usr/lib/firefox/distribution 2> /dev/null
 #about:memory -> measure
-sudo tee /usr/lib64/firefox/distribution/policies.json >/dev/null <<'EOF'
+sudo tee /usr/lib/firefox/distribution/policies.json >/dev/null <<'EOF'
 {
   "policies": {
     "ExtensionSettings": {
@@ -193,43 +193,4 @@ sudo tee /usr/lib64/firefox/distribution/policies.json >/dev/null <<'EOF'
     }
   }
 }
-EOF
-
-\rm ~/FirefoxSetup.tar.bz2
-
-#value=$(<$myloc/firefox.png.txt)
-#base64 -d <<< "$value" > /tmp/firefox.png
-#sudo mv /tmp/firefox.png /usr/lib/firefox/
-
-sudo \rm /usr/share/applications/firefox.desktop
-sudo tee -a /usr/share/applications/firefox.desktop >/dev/null <<'EOF'
-[Desktop Entry]
-Version=1.0
-Name=Firefox Web Browser
-Name[fr]=Navigateur Web Firefox
-Comment=Browse the World Wide Web
-Comment[fr]=Naviguer sur le Web
-GenericName=Web Browser
-GenericName[fr]=Navigateur Web
-Keywords=Internet;WWW;Browser;Web;Explorer
-Keywords[fr]=Internet;WWW;Browser;Web;Explorer;Fureteur;Surfer;Navigateur
-Exec=firefox %u
-Terminal=false
-X-MultipleArgs=false
-Type=Application
-Icon=/usr/lib64/firefox/firefox.png
-Categories=GNOME;GTK;Network;WebBrowser;
-MimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/rss+xml;application/rdf+xml;image/gif;image/jpeg;image/png;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;x-scheme-handler/chrome;video/webm;application/x-xpinstall;
-StartupNotify=true
-Actions=new-window;new-private-window;
-
-[Desktop Action new-window]
-Name=Open a New Window
-Name[fr]=Ouvrir une nouvelle fenêtre
-Exec=firefox -new-window
-
-[Desktop Action new-private-window]
-Name=Open a New Private Window
-Name[fr]=Ouvrir une nouvelle fenêtre de navigation privée
-Exec=firefox -private-window
 EOF
