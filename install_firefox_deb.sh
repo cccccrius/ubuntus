@@ -197,11 +197,9 @@ EOF
 
 \rm ~/FirefoxSetup.tar.bz2
 
-value=$(<$myloc/firefox.png.txt)
-base64 -d <<< "$value" > /tmp/firefox.png
-sudo mv /tmp/firefox.png /usr/lib64/firefox/
-
-sudo setfacl -Rm u:$USER:rwx /usr/lib64/firefox/
+#value=$(<$myloc/firefox.png.txt)
+#base64 -d <<< "$value" > /tmp/firefox.png
+#sudo mv /tmp/firefox.png /usr/lib/firefox/
 
 sudo \rm /usr/share/applications/firefox.desktop
 sudo tee -a /usr/share/applications/firefox.desktop >/dev/null <<'EOF'
