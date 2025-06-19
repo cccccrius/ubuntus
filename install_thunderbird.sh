@@ -30,10 +30,10 @@ sudo \rm /usr/lib64/thunderbird/thunderbird.cfg 2> /dev/null
 sudo tee /usr/lib64/thunderbird/thunderbird.cfg >/dev/null <<'EOF'
 //the first line is always a comment
 pref("network.trr.mode", 3);
-pref("network.trr.uri", "https://dns.adguard.com/dns-query");
-pref("network.trr.custom_uri", "https://dns.adguard.com/dns-query");
-pref("network.trr.bootstrapAddress", "1.1.1.2");
-pref("network.trr.default_provider_uri", "https://dns.adguard.com/dns-query");
+pref("network.trr.uri", "https://noads.joindns4.eu/dns-query");
+pref("network.trr.custom_uri", "https://noads.joindns4.eu/dns-query");
+pref("network.trr.bootstrapAddress", "1.0.0.2");
+pref("network.trr.default_provider_uri", "https://noads.joindns4.eu/dns-query");
 pref("extensions.autoDisableScopes", 0);
 pref("browser.aboutConfig.showWarning", false);
 pref("browser.startup.homepage", "https://www.google.fr");
