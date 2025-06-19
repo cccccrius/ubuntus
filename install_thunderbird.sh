@@ -4,6 +4,7 @@
 myloc=$(dirname "$(realpath $0)")
 
 sudo apt purge -y thunderbird*
+sudo snap remove thunderbird
 sudo \rm -f /usr/bin/thunderbird
 sudo \rm -Rf /usr/lib64/thunderbird
 sudo \rm -Rf /usr/lib64/thunderbird-addons
