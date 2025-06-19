@@ -4,6 +4,7 @@
 myloc=$(dirname "$(realpath $0)")
 
 sudo apt purge -y firefox*
+sudo snap remove firefox
 sudo \rm -f /usr/bin/firefox
 sudo \rm -Rf /usr/lib64/firefox
 sudo \rm -Rf /usr/lib64/firefox-addons
