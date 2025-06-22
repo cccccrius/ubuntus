@@ -162,9 +162,9 @@ EOF
 
 \rm ~/ThunderbirdSetup.tar.bz2
 
-value=$(<$myloc/thunderbird.png.txt)
-base64 -d <<< "$value" > /tmp/thunderbird.png
-sudo mv /tmp/thunderbird.png /usr/lib64/thunderbird/
+sudo mkdir /usr/share/icons/Crius 2> /dev/null
+sudo cp ./thunderbird.png /usr/share/icons/Crius
+sudo cp ./thunderbird.png /usr/lib64/firefox/
 
 sudo setfacl -Rm u:$USER:rwx /usr/lib64/thunderbird/
 
