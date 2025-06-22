@@ -178,9 +178,9 @@ EOF
 
 \rm ~/FirefoxSetup.tar.bz2
 
-value=$(<$myloc/firefox.png.txt)
-base64 -d <<< "$value" > /tmp/firefox.png
-sudo mv /tmp/firefox.png /usr/lib64/firefox/
+sudo mkdir /usr/share/icons/Crius 2> /dev/null
+sudo cp ./firefox.png /usr/share/icons/Crius
+sudo cp ./firefox.png /usr/lib64/firefox/
 
 sudo setfacl -Rm u:$USER:rwx /usr/lib64/firefox/
 
