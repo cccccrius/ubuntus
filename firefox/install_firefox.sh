@@ -10,11 +10,11 @@ sudo \rm -Rf /usr/lib64/firefox
 sudo \rm -Rf /usr/lib64/firefox-addons
 sudo \rm -Rf /opt/firefox
 #sudo \rm -Rf ~/.mozilla
-sudo \rm ~/FirefoxSetup.tar.bz2 2> /dev/null
+sudo \rm ~/FirefoxSetup.tar.xz 2> /dev/null
 
 wget -O ~/FirefoxSetup.tar.xz "https://download.mozilla.org/?product=firefox-latest&os=linux64&lang=fr"
 
-sudo tar xf ~/FirefoxSetup.tar.bz2 -C /usr/lib64/
+sudo tar xf ~/FirefoxSetup.tar.xz -C /usr/lib64/
 
 sudo ln -s /usr/lib64/firefox/firefox /usr/bin/firefox
 
@@ -182,7 +182,7 @@ sudo tee /usr/lib64/firefox/distribution/policies.json >/dev/null <<'EOF'
 }
 EOF
 
-\rm ~/FirefoxSetup.tar.bz2
+\rm ~/FirefoxSetup.tar.xz
 
 sudo mkdir /usr/share/icons/Crius 2> /dev/null
 sudo cp ./firefox.png /usr/share/icons/Crius
